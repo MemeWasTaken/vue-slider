@@ -23,6 +23,17 @@ const app = new Vue ({
             } else {
                 this.counter += 1;
             }
+        },
+        autoPlay: function () {
+            if(this.counter < this.imgs.length -1) {
+                this.counter += 1;
+            } else {
+                this.counter = 0;
+            }
         }
-    }
+    },
+    created() {
+        const runningTime = setInterval(this.autoPlay, 3000);
+    } 
+    
 });
