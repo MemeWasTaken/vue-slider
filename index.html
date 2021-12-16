@@ -13,7 +13,7 @@
 
 <body>
   <div id="containerVue" class="container">
-    <div class="slider-wrapper">
+    <div @mouseover="hover = true" @mouseleave="hover = false" class="slider-wrapper">
       <div class="prev">
         <i @click="prev" class="fas fa-angle-left"></i>
       </div>

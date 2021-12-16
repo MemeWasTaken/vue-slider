@@ -8,6 +8,7 @@ const app = new Vue ({
             'image3.jpg',
             'image4.jpg'
         ],
+        hover: false,
     },
     methods: {
         prev: function () {
@@ -33,7 +34,10 @@ const app = new Vue ({
         }
     },
     created() {
-        const runningTime = setInterval(this.autoPlay, 3000);
+        if (this.hover == false) {
+            const runningTime = setInterval(this.autoPlay, 3000);
+        } else {
+            clearInterval(this.runningTime);
+        }
     } 
-    
 });
