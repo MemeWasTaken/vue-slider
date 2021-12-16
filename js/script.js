@@ -10,6 +10,19 @@ const app = new Vue ({
         ],
     },
     methods: {
-
+        prev: function () {
+            if(this.counter == 0) {
+                this.counter = this.imgs.length -1;
+            } else {
+                this.counter -= 1;
+            }
+        },
+        next: function () {
+            if (this.counter == this.imgs.length - 1) {
+                this.counter = 0
+            } else {
+                this.counter += 1;
+            }
+        }
     }
 });

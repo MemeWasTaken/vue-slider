@@ -15,13 +15,13 @@
   <div id="containerVue" class="container">
     <div class="slider-wrapper">
       <div class="prev">
-        <i class="fas fa-angle-left"></i>
+        <i @click="prev" class="fas fa-angle-left"></i>
       </div>
       <div class="images">
         <img :src=" `img/${imgs[counter]}` " alt="">
       </div>
       <div class="next">
-        <i class="fas fa-angle-right"></i>
+        <i @click="next" class="fas fa-angle-right"></i>
       </div>
       <div class="nav">
         <i class="fas fa-circle"></i>
